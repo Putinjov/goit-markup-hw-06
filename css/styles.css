@@ -218,13 +218,10 @@ h6 {
   color: #ffffff;
 }
 
-.button,
-.push-button,
-.submit-btn {
+.button {
   padding: 10px 32px;
   margin-top: 30px;
   border: 0;
-  border-radius: 4px;
 
   background-color: var(--brand-color-accent);
   color: #ffffff;
@@ -237,15 +234,15 @@ h6 {
   cursor: pointer;
   letter-spacing: 0.06em;
 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
-.button:focus,
-.push-button:hover,
-.push-button:focus
-.submit-btn:hover,
-.submit-btn:focus {
+.button:focus
+{
   background-color: #188ce8;
 }
 
@@ -269,7 +266,7 @@ h6 {
   top: 50%;
 
   width: 528px;
-  height: 581px;
+  
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -281,7 +278,7 @@ h6 {
     opacity 250ms var(--time-transition);
 }
 
-.modal .button {
+.button.close {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -295,13 +292,20 @@ h6 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  box-shadow: none;
 
   background-color: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.button .icon {
+.button.close > .icon {
   color: currentColor;
+}
+
+.button.close:hover > .icon,
+.button.close:focus > .icon
+{
+  fill: var(--brand-color-accent);
 }
 
 .backdrop.is-hidden {
@@ -345,8 +349,8 @@ h6 {
   flex-direction: column;
 }
 
-.form-item:not(:last-child) {
-  margin-bottom: 28px;
+.input .item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .form-label {
@@ -456,6 +460,7 @@ h6 {
   background-origin: border-box;
   
 }
+
 /*Section*/
 
 .section {
@@ -753,14 +758,14 @@ h6 {
 }
 
 .footer-push {
-  margin-left: 93px;
+  margin-left: auto;
 }
+
 
 .footer-form {
   display: flex;
   align-items: center;
-  width: 358px;
-  height: 50px;
+  width: 570px;
 }
 
 .footer-label {
@@ -789,20 +794,17 @@ h6 {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.push-button {
+.footer-push .button {
   display: flex;
   align-items: center;
   min-width: 200px;
-  height: 50px;
   margin: 0;
   padding: 10px 28px;
-
-  transition: background-color 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function);
 }
 
 
 .push-icon {
+  fill:var(--white-color);
   margin-left: 10px;
 }
 

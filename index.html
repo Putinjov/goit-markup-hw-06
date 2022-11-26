@@ -566,10 +566,10 @@
           <div class="footer-push">
             <span class="push-text">Підпишіться на розсилку</span>
             <form class="footer-form">
-              <label class="footer-label">
-                <input type="email" name="email" class="footer-input" placeholder="E-mail">
+              <label for="push" class="footer-label">
+                <input type="email" name="email" id="push" class="footer-input" placeholder="E-mail">
               </label>
-              <button type="submit" class="push-button">Підписатися
+              <button type="submit" class="button">Підписатися
                 <svg width="24" height="24" class="push-icon">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
@@ -582,39 +582,46 @@
     <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="button" type="button" data-modal-close>
+        <button class="button close" type="button" data-modal-close>
           <svg class="icon" width="18" height="18">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <!--Formf  -->
+        <!--Form  -->
         <form class="form" autocomplete="off">
           <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
             <ul class="input list">
-              <li class="form-item">
-                <label for="name" class="form-label">Ім'я</label>
-                  <input class="form-input" type="text" name="name">
-                  <svg class="form-icon" width="18" height="18">
-                    <use href="./images/icons.svg#icon-person"></use>
-                  </svg>
+              <li class="item">
+                <div class="form-item">
+                  <label for="name" class="form-label">Ім'я</label>
+                    <input class="form-input" id="name" type="text" name="name">
+                    <svg class="form-icon" width="18" height="18">
+                      <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
+                </div>
               </li>
-            <li class="form-item">
-              <label for="tel" class="form-label">Телефон</label>
-                <input class="form-input" type="tel" name="tel">
-                <svg class="form-icon" width="18" height="18">
-                  <use href="./images/icons.svg#icon-phone"></use>
-                </svg>
+            <li class="item">
+              <div class="form-item">
+                <label for="tel" class="form-label">Телефон</label>
+                  <input class="form-input" type="tel" id="tel" name="tel">
+                  <svg class="form-icon" width="18" height="18">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+              </div>
             </li>
-            <li class="form-item">
-              <label for="mail" class="form-label">Пошта</label>
-                <input class="form-input" type="email" name="mail">
-                <svg class="form-icon" width="18" height="18">
-                  <use href="./images/icons.svg#icon-email"></use>
-                </svg>   
+              
+            <li class="item">
+              <div class="form-item">
+                <label for="mail" class="form-label">Пошта</label>
+                  <input class="form-input" type="email" id="mail" name="mail">
+                  <svg class="form-icon" width="18" height="18">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+              </div>   
             </li>
-            <li class="form-item">
+            <li class="item">
               <label for="comment" class="form-label">Коментар</label>
-              <textarea class="form-comment" name="comment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
+              <textarea class="form-comment" id="comment" name="comment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
             </li>
             </ul>
             <div class="privacy-policy">
@@ -623,7 +630,7 @@
               <span class="check-box"></span>
               </label>
             </div>
-            <button type="submit" class="submit-btn">Відправити</button>
+            <button type="submit" class="button send">Відправити</button>
         </form>
       </div>
     </div>
