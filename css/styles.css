@@ -300,6 +300,7 @@ h6 {
 
 .button.close > .icon {
   color: currentColor;
+  transition: fill 250ms var(--time-transition);
 }
 
 .button.close:hover > .icon,
@@ -354,6 +355,7 @@ h6 {
 }
 
 .form-label {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -405,6 +407,7 @@ h6 {
   left: 12px;
   fill: var(--text-color-primary);
 
+  transform: translateY(-50%);
   transition: fill 250ms var(--time-transition);
 }
 
